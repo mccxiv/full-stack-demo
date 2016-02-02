@@ -1,0 +1,14 @@
+{
+  "name": "full-stack",
+  "version": "1.0.0",
+  "main": "api.js",
+  "scripts": {
+    "start": "node server --redis-port 6379 --redis-address redis"
+  },
+  "author": "Andrea Stella",
+  "dependencies": {
+    "express": "^4.13.4",
+    "redis": "^2.4.2",
+    "yargs": "^3.32.0"
+  }
+}

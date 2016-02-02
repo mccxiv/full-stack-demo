@@ -1,0 +1,49 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.header {
+    background-color: #1BABFF;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0;
+    overflow-x: auto;
+}
+
+.content h2 {
+    font-size: 16px;
+    color: rgba(0,0,0,.54);
+    text-transform: uppercase;
+    line-height: unset;
+}
+
+.content > * {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.intro {
+    margin-top: 200px;
+}
+
+.intro i {
+    vertical-align: -7px;
+    margin-left: -8px;
+}
+
+.menu a {
+    cursor: pointer;
+}
+
+.content > *:not(.intro) {
+    display: none;
+}
+
+.log, .aggregate {
+    width: 400px;
+    margin-bottom: 60px;
+}

@@ -1,0 +1,24 @@
+redis:
+  image: redis:3.0.7
+
+api:
+  image: node:5.5.0
+  ports:
+   - "8080:80"
+  links:
+   - redis:redis
+  volumes:
+   - "./api:/usr/src/app"
+  working_dir: "/usr/src/app"
+  command: "npm start"
+
+nginx:
+  image: nginx:1.9.10
+  links:
+   - api:api
+  volumes:
+   - "./nginx/nginx.conf:/etc/nginx/nginx.conf:ro"
+   - "./nginx/mime.types:/etc/nginx/mime.types:ro"
+   - "./static:/var/www/html"
+  ports:
+   - "80:80"

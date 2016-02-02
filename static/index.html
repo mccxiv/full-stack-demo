@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!-- head and body are optional in html5 -->
+
+<title>Logs</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.0/material.indigo-pink.min.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- Using MDL for layout. https://www.getmdl.io/ -->
+<div class="mdl-layout mdl-js-layout">
+    <header class="header mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Full Stack Assignment Log Viewer</span>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Logs by Endpoint</span>
+        <nav class="menu mdl-navigation">
+            <a class="mdl-navigation__link all-button">All</a>
+            <a class="mdl-navigation__link hw-button">hello-world</a>
+        </nav>
+    </div>
+    <main class="content mdl-layout__content">
+
+        <div class="intro">
+            <h2>Full Stack Demo</h2>
+            <p>
+                Three Docker containers: 'redis', 'api' and 'nginx'.<br>
+                Front end: Material Design Lite + jQuery.
+            </p>
+            <p><i class="material-icons">chevron_left</i>View logs from the main menu.</p>
+        </div>
+
+        <div>
+            <h2>Raw Log</h2>
+            <table class="log mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                <thead>
+                <tr>
+                    <th>Endpoint</th>
+                    <th>IP</th>
+                    <th>Status</th>
+                    <th>Time</th>
+                </tr>
+                </thead>
+                <tbody><!-- generated --></tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Minute Aggregate - New to old</h2>
+            <table class="aggregate mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                <thead>
+                <tr>
+                    <th>Count</th>
+                    <th>IP</th>
+                    <th>Minute</th>
+                </tr>
+                </thead>
+                <tbody><!-- generated --></tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<!-- Decided to use jQuery without a framework, since it's a simple project -->
+<!-- In hindsight, I should've just gone with React instead -->
+
+<!-- Using CNDs for this simple project -->
+<!-- In a real project I would opt for a package manager (npm + webpack) -->
+<script src="https://code.getmdl.io/1.1.0/material.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="http://momentjs.com/downloads/moment.min.js"></script>
+<script src="script.js"></script>
