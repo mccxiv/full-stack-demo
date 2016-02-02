@@ -1,0 +1,7 @@
+{
+  "name": "full-stack-demo",
+  "version": "0.0.1",
+  "scripts": {
+    "install": "cd api && npm install && cd .."
+  }
+}
