@@ -22,3 +22,5 @@ nginx:
    - "./static:/var/www/html"
   ports:
    - "80:80"
+  volumes_from:
+   - api
